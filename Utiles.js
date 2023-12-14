@@ -9,12 +9,12 @@ export const obtenerValorInput = (idInput) => document.getElementById(idInput).v
 
 export const validarSesion = () => {
   const sesionActiva = sessionStorage.getItem('sesionActiva') === 'TRUE';
-  const estaEnLogin = document.location.pathname.includes('login.html');
+  const estaEnLogin = document.location.pathname.includes('index.html');
 
   if (!sesionActiva) {
 
     if (!estaEnLogin) {
-      document.location.replace('login.html');
+      document.location.replace('index.html');
     }
   } else if (estaEnLogin) {
 
