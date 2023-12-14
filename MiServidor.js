@@ -23,7 +23,8 @@ const manejarErrores = (error = new Error('Error desconocido')) => {
   };
   
   export class MiServidor {
-    static urlBase = 'http://localhost:3000';
+    static urlBase = 'https://adsfasdf-xosw.onrender.com';
+    /* static urlBase = 'http://localhost:3000'; */
   
    
     static login(email, password) {
