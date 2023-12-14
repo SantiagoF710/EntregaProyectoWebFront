@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frog - Compra</title>
+    <link rel="shortcut icon" href="../Img/frog.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+  
+      <div class="flexbox centrado">
+          
+        
+              <nav>
+          
+                  <a href="lista.html">Catalogo</a>
+                  <a href="locales.html" >Locales</a>
+                  <a href="entregas.html">Entregas</a>
+                  <a href="nosotros.html">Nosotros</a>
+  
+  
+              </nav>
+  
+              <div class="logo">
+                    
+                  <a href="inicio.html"><img class="ola" src="../Img/logo_frog.png" ></a>
+    
+            </div>
+  
+            <a class="carrito" href="carrito.html">Carrito</a>
+  
+      </div>
+
+      <body>
+
+        <section id="compra" class="centrado compra2">
+            <h1>Realizar Compra</h1>
+        
+            <button onclick="mostrarFormularioTienda()">Comprar en Tienda</button>
+            <button onclick="mostrarFormularioDomicilio()">Comprar a Domicilio</button>
+        
+            <div id="tiendaForm" style="display: none;">
+                <h2>Seleccionar Tienda</h2>
+                <form>
+                    <label for="tienda">Seleccione la tienda:</label>
+                    <select id="tienda" name="tienda">
+                        <option value="tienda1">Tienda 1</option>
+                        <option value="tienda2">Tienda 2</option>
+                        <option value="tienda3">Tienda 3</option>
+                    </select>
+                    <br>
+                    <button type="button" onclick="mostrarOpcionesPago()">Seleccionar Método de Pago</button>
+                </form>
+            </div>
+        
+            <div id="domicilioForm" style="display: none;">
+                <h2>Datos de Domicilio</h2>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <br>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                    <br>
+                    <button type="button" onclick="mostrarOpcionesPago()" disabled>Seleccionar Método de Pago</button>
+                </form>
+            </div>
+        
+            <div id="opcionesPago" style="display: none;">
+                <h2>Seleccionar Método de Pago</h2>
+                <button onclick="realizarCompra('Efectivo')">Pagar en Efectivo</button>
+                <button onclick="mostrarFormularioTarjeta()">Pagar con Tarjeta</button>
+            </div>
+        
+            <div id="tarjetaForm" style="display: none;">
+                <h2>Datos de Tarjeta</h2>
+                <form>
+                    <label for="numeroTarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+                    <br>
+                    <label for="nombreTitular">Nombre del Titular:</label>
+                    <input type="text" id="nombreTitular" name="nombreTitular" required>
+                    <br>
+                    <label for="fechaExpiracion">Fecha de Expiración:</label>
+                    <input type="text" id="fechaExpiracion" name="fechaExpiracion" required>
+                    <br>
+                    <label for="codigoSeguridad">Código de Seguridad:</label>
+                    <input type="text" id="codigoSeguridad" name="codigoSeguridad" required>
+                    <br>
+                    <button type="button" onclick="realizarCompra('Tarjeta')" disabled>Aceptar</button>
+                </form>
+            </div>
+        
+            <div id="mensajeCompraCompletada" style="display: none;">
+                <h2>¡Compra Completada!</h2>
+            </div>
+
+        </section>
+
+        <footer>
+
+            <div>
+                <img src="../Img/logo_frog.png" alt="">
+                <p>095483279</p>
+                <p>servicioalcliente@frog.com.uy</p>
+                <p>Trabaja con nosotros</p>
+            </div>
+    
+            <div class="listfooter">
+                <a href="lista.html">Catalogo</a>
+                <a href="locales.html">Locales</a>
+                <a href="entregas.html">Entregas</a>
+                 <a href="nosotros.html">Nosotros</a>
+        
+            </div>
+    
+            <div class="redes">
+    
+                <div>
+                    <img src="../Img/x.png" alt="">
+                </div>
+                <div>
+                    <img src="../Img/ig.png" alt="">
+                </div>
+                <div>
+                    <img src="../Img/fb.png" alt="">
+                </div>
+                <div>
+                    <img src="../Img/linkedin.png" alt="">
+                </div>
+    
+            </div>
+    
+            <div class="logos">
+    
+                <div>
+                    <p>Medios de pago</p>
+                    <img src="../Img/master.png" alt="">
+                    <img src="../Img/oca.png" alt="">
+                    <img src="../Img/visa.png" alt="">
+                </div>
+    
+                <div>
+                    <p>Descarga ahora mismo</p>
+                    <img src="../Img/play.png" alt="">
+                    <img src="../Img/app.png" alt="">
+                </div>
+    
+            </div>
+            
+    
+        </footer>
+    
+
+    
+        <script src="compra.js"></script>
+    </body>
+    </html>
