@@ -19,7 +19,7 @@ document.querySelector('#botonLogin').addEventListener('click', () => {
   MiServidor.login(email, password)
     .then(() => {
       sessionStorage.setItem('sesionActiva', 'TRUE');
-      document.location.replace('secciones/inicio.html');
+      document.location.replace('inicio.html');
     })
     .catch((error) => {
       imprimir('errorLogin', error);

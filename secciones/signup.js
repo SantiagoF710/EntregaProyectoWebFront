@@ -2,7 +2,7 @@ import { MiServidor } from '../MiServidor.js';
 import { imprimir, obtenerValorInput, } from '../Utiles.js';
 
 document.querySelector("#botonSignupVolver").addEventListener('click', () => {
-    document.location.replace('../Index.html');
+    document.location.replace('login.html');
   });
 
 document.querySelector('#botonSignup').addEventListener('click', () => {
@@ -20,7 +20,7 @@ document.querySelector('#botonSignup').addEventListener('click', () => {
 
     MiServidor.signup(email, password)
   .then(() => {
-    document.location.replace('../Index.html');
+    document.location.replace('login.html');
   })
   .catch(() => {
     imprimir('errorSignup', `Ya existe un usuario con el email ${email}`);
