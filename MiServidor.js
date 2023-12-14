@@ -23,7 +23,7 @@ const manejarErrores = (error = new Error('Error desconocido')) => {
   };
   
   export class MiServidor {
-    static urlBase = 'https://adsfasdf-xosw.onrender.com';
+    static urlBase = 'https://entregaproyectowebback.onrender.com';
     /* static urlBase = 'http://localhost:3000'; */
   
    
