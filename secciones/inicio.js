@@ -1,18 +1,30 @@
-let slider = document.querySelector("#slider")
-let contador = 1 
+const slider = document.querySelector('#slider');
+const sliderStatus = document.querySelector('#sliderStatus');
+let contador = 1;
 
-const paneles = ["../Img/banner1.jpg","../Img/banner2.jpg","../Img/banner3.jpg","../Img/banner4.jpg"]
+const paneles = [
+  { src: '../Img/banner1.jpg', label: 'Ofertas en snacks Cheetos y Ruffles' },
+  { src: '../Img/banner2.jpg', label: 'Descuento en la segunda unidad de Sprite' },
+  { src: '../Img/banner3.jpg', label: 'Promociones destacadas de Frog' },
+  { src: '../Img/banner4.jpg', label: 'Beneficios y descuentos de Frog' }
+];
 
-function cargarSlider(){
-    slider.style.backgroundImage = `url("${paneles[contador]}")`
-    contador++
+paneles.slice(1).forEach(({ src }) => {
+  const imagen = new Image();
+  imagen.src = src;
+});
 
-    if(contador >= 4){
+function cargarSlider() {
+  slider.style.opacity = '0.35';
 
-        contador = 0
-
-    }
-  
+  window.setTimeout(() => {
+    const panel = paneles[contador];
+    slider.style.backgroundImage = `url("${panel.src}")`;
+    slider.setAttribute('aria-label', panel.label);
+    sliderStatus.textContent = `${contador + 1} / ${paneles.length}`;
+    slider.style.opacity = '1';
+    contador = (contador + 1) % paneles.length;
+  }, 180);
 }
 
- setInterval(cargarSlider, 7000)
+window.setInterval(cargarSlider, 7000);
