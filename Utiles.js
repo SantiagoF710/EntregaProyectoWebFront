@@ -9,25 +9,18 @@ export const obtenerValorInput = (idInput) => document.getElementById(idInput).v
 
 export const validarSesion = () => {
   const sesionActiva = sessionStorage.getItem('sesionActiva') === 'TRUE';
-  const estaEnLogin = document.location.pathname.includes('index.html');
+  const estaEnLogin = document.location.pathname.endsWith('/index.html') || document.location.pathname === '/';
+  const estaEnSecciones = document.location.pathname.includes('/secciones/');
 
   if (!sesionActiva) {
-
     if (!estaEnLogin) {
-      document.location.replace('index.html');
+      document.location.replace(estaEnSecciones ? '../index.html' : 'index.html');
     }
   } else if (estaEnLogin) {
-
-    document.location.replace('lista.html');
+    document.location.replace('secciones/inicio.html');
   }
 };
 
 export const mostrarTodosLosProductos = (productos = [new Productos()]) => {
-  let listado = '<article id="grilla" class="grillacat" </article> '
-
-  productos.forEach((c) => {
-    listado += c.mostrarEnLista();
-  });
-
-  return listado;
+  return `<article id="grilla" class="grillacat">${productos.map((producto) => producto.mostrarEnLista()).join('')}</article>`;
 };

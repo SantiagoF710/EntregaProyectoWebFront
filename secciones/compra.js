@@ -4,6 +4,8 @@ function mostrarFormularioTienda() {
 
     tiendaForm.style.display = 'block';
     domicilioForm.style.display = 'none';
+    document.getElementById('opcionesPago').style.display = 'none';
+    document.getElementById('tarjetaForm').style.display = 'none';
 }
 
 function mostrarFormularioDomicilio() {
@@ -12,6 +14,8 @@ function mostrarFormularioDomicilio() {
 
     tiendaForm.style.display = 'none';
     domicilioForm.style.display = 'block';
+    document.getElementById('opcionesPago').style.display = 'none';
+    document.getElementById('tarjetaForm').style.display = 'none';
 
     const botonSeleccionarPago = document.querySelector('#domicilioForm button');
     botonSeleccionarPago.disabled = true;
@@ -37,7 +41,6 @@ function mostrarFormularioTarjeta() {
     document.getElementById('fechaExpiracion').addEventListener('input', validarCamposTarjeta);
     document.getElementById('codigoSeguridad').addEventListener('input', validarCamposTarjeta);
 
-    botonAceptar.addEventListener('click', () => realizarCompra('Tarjeta'));
 }
 
 function validarCamposDomicilio() {
@@ -59,7 +62,8 @@ function validarCamposTarjeta() {
 }
 
 function realizarCompra(metodoPago) {
-
+    localStorage.removeItem('carrito');
+    window.dispatchEvent(new Event('cart-updated'));
     const mensajeCompraCompletada = document.getElementById('mensajeCompraCompletada');
     mensajeCompraCompletada.style.display = 'block';
 

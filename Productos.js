@@ -24,17 +24,19 @@ export class Productos {
 
     mostrarEnLista() {
       return `<figure class="producto">
-        <img src="${this.img}" alt="${this.nombre}">
-        <div class="precio"><p>PRECIO = $${this.precio}</p></div>
+        <div class="product-image-wrap">
+          <img src="${this.img}" alt="${this.nombre}">
+          <span class="product-category">${this.categoria}</span>
+        </div>
+        <figcaption class="product-info">
+          <h3>${this.nombre}</h3>
+          <p>${this.descripcion || 'Un producto seleccionado con la calidad de Frog.'}</p>
+          <div class="precio">$${this.precio}</div>
+        </figcaption>
         <div class="acciones">
-        <a href="detalle.html?id=${this.id}">Ver más...</a>
-          <button class="agregarCarrito" data-id="${this.id}">Agregar al carrito</button>
+          <a href="detalle.html?id=${this.id}">Ver detalle</a>
+          <button class="agregarCarrito" data-id="${this.id}" type="button">Agregar</button>
         </div>
       </figure>`;
     }
-    mostrarDetalle(){
-        
-    }
-
-
 }

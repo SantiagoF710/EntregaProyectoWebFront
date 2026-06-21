@@ -1,14 +1,13 @@
     import { Productos } from '../Productos.js';
     import { MiServidor } from '../MiServidor.js';
-    import { imprimir, mostrarTodosLosProductos, validarSesion } from '../Utiles.js';
+    import { imprimir, mostrarTodosLosProductos } from '../Utiles.js';
 
     let inicio = 0;
     let final = 16;
     let filtroCategorias;
     let data;
-    let carrito = [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    validarSesion();
     cargarProductos();
 
     function cargarProductos() {
@@ -41,6 +40,8 @@
 
         filtroCategorias.addEventListener('change', () => {
             const categoriaSeleccionada = filtroCategorias.value;
+            inicio = 0;
+            final = 16;
 
             if (categoriaSeleccionada === 'todas') {
                 mostrarListado(data); 
@@ -66,7 +67,7 @@
 
     function mostrarListado(productos = data) {
 
-        const productosOrdenados = productos.sort((a, b) => a.id - b.id);
+        const productosOrdenados = [...productos].sort((a, b) => a.id - b.id);
 
         const productosPrimeros16 = productosOrdenados.slice(inicio, final);
 
@@ -75,8 +76,6 @@
         );
 
         imprimir('primeraseccion', mostrarTodosLosProductos(productosMostrados));
-        mostrarBotonesN(true); 
-
         document.querySelectorAll('.agregarCarrito').forEach((boton) => {
             boton.addEventListener('click', (event) => {
                 const productId = event.target.dataset.id;
@@ -89,6 +88,7 @@
                     console.log('Carrito:', carrito);
         
                     localStorage.setItem('carrito', JSON.stringify(carrito));
+                    window.dispatchEvent(new Event('cart-updated'));
                     mostrarMensajeAgregado(productoEncontrado.nombre);
                 }
             });
@@ -132,8 +132,6 @@
         mostrarListado();
     }
 
-    window.onload = cargarProductos;
-
     let n1 = document.querySelector(".n1");
     let n2 = document.querySelector(".n2");
     let n3 = document.querySelector(".n3");
@@ -141,4 +139,3 @@
     n1.addEventListener("click", () => actualizarGrilla(0, 16));
     n2.addEventListener("click", () => actualizarGrilla(16, 32));
     n3.addEventListener("click", () => actualizarGrilla(32, 48));
-
