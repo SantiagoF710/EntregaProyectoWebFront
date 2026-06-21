@@ -1,43 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frog - Login</title>
+    <meta name="description" content="Ingresá a Frog y hacé tus compras de forma simple, rápida y segura.">
+    <title>Frog | Iniciar sesión</title>
     <link rel="shortcut icon" href="Img/frog.png">
     <link rel="stylesheet" href="secciones/style.css">
 </head>
-<body>
+<body class="login-page">
+    <main id="formulario" class="login-main">
+        <section class="login-shell" aria-label="Acceso a Frog">
+            <div class="login-brand-panel">
+                <div class="brand-decoration brand-decoration-one" aria-hidden="true"></div>
+                <div class="brand-decoration brand-decoration-two" aria-hidden="true"></div>
 
-    <section id="formulario">
+                <div class="brand-content">
+                    <div class="brand-logo-wrap">
+                        <img src="Img/logo_frog.png" alt="Frog" class="brand-logo">
+                    </div>
 
-    <div class="formLogin">
-      <form>
-        <div class="frog">
-            <img src="Img/logo_frog.png" alt="">
-        </div>
-        
-        <h2>Login</h2>
-        <div class="inputLogin">
-            <label>Usuario:</label>
-            <input type="text" id="usuarioLogin" />
-        </div>
-        <div class="inputLogin">
-            <label>Password:</label>
-            <input type="password" id="contraseñaLogin" />
-        </div>
-        <div class="link">
-          <a href="secciones/signup.html">Registrarse</a>
-      </div>
-            <input type="button" id="botonLogin" value="Ingresar" />
-        <div id="errorLogin"></div>
-      </form>
-    </div>
+                    <span class="brand-eyebrow">Tu súper, estés donde estés</span>
+                    <h1>Todo lo que necesitás, más cerca.</h1>
+                    <p class="brand-description">
+                        Encontrá tus productos favoritos y recibí tus compras de forma simple,
+                        rápida y segura.
+                    </p>
 
-  </section>
+                    <ul class="brand-benefits" aria-label="Beneficios de comprar en Frog">
+                        <li>
+                            <span class="benefit-icon" aria-hidden="true">✓</span>
+                            Productos frescos todos los días
+                        </li>
+                        <li>
+                            <span class="benefit-icon" aria-hidden="true">✓</span>
+                            Ofertas y beneficios exclusivos
+                        </li>
+                        <li>
+                            <span class="benefit-icon" aria-hidden="true">✓</span>
+                            Compra fácil y entrega confiable
+                        </li>
+                    </ul>
+                </div>
 
-  <script src='secciones/login.js' type="module"></script>
+                <p class="brand-footer">Frog Uruguay · Siempre cerca</p>
+            </div>
 
+            <div class="login-form-panel">
+                <div class="formLogin">
+                    <form>
+                        <div class="mobile-logo frog">
+                            <img src="Img/logo_frog.png" alt="Frog">
+                        </div>
 
+                        <div class="form-heading">
+                            <span class="form-kicker">Bienvenido de nuevo</span>
+                            <h2>Iniciá sesión</h2>
+                            <p>Ingresá tus datos para continuar con tu compra.</p>
+                        </div>
+
+                        <div class="inputLogin">
+                            <label for="usuarioLogin">Correo electrónico</label>
+                            <div class="input-control">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M4 6h16v12H4zM4 7l8 6 8-6" />
+                                </svg>
+                                <input
+                                    type="email"
+                                    id="usuarioLogin"
+                                    placeholder="nombre@correo.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="inputLogin">
+                            <label for="contraseñaLogin">Contraseña</label>
+                            <div class="input-control">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="5" y="10" width="14" height="10" rx="2" />
+                                    <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                                </svg>
+                                <input
+                                    type="password"
+                                    id="contraseñaLogin"
+                                    placeholder="Ingresá tu contraseña"
+                                    autocomplete="current-password"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <input type="button" id="botonLogin" value="Ingresar a mi cuenta">
+                        <div id="errorLogin" role="alert" aria-live="polite"></div>
+
+                        <div class="register-prompt link">
+                            <span>¿Todavía no tenés una cuenta?</span>
+                            <a href="secciones/signup.html">Creá una gratis</a>
+                        </div>
+
+                        <p class="security-note">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3l7 3v5c0 4.6-2.9 8-7 10-4.1-2-7-5.4-7-10V6l7-3z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
+                            Tus datos están protegidos.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="secciones/login.js" type="module"></script>
 </body>
 </html>
