@@ -12,12 +12,6 @@
   --surface: #ffffff;
   --canvas: #f4f8f5;
   --danger: #bd3535;
-  --shadow-sm: 0 10px 30px rgba(15, 69, 41, 0.08);
-  --shadow-md: 0 22px 60px rgba(15, 69, 41, 0.13);
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 30px;
-  --container: 1180px;
 }
 
 * {
@@ -60,7 +54,7 @@ input[type="button"] {
 
 .centrado,
 .container {
-  width: min(var(--container), calc(100% - 40px));
+  width: min(1180px, calc(100% - 40px));
   margin-inline: auto;
 }
 
@@ -127,7 +121,7 @@ button,
   color: #ffffff;
   background: var(--green-700);
   border: 0;
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   font-weight: 800;
   text-decoration: none;
   transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
@@ -303,8 +297,8 @@ button:disabled {
     radial-gradient(circle at 84% 22%, rgba(78, 205, 100, 0.2), transparent 27%),
     radial-gradient(circle at 74% 115%, rgba(255, 255, 255, 0.08), transparent 35%),
     linear-gradient(135deg, var(--green-950), var(--green-800));
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: 30px;
+  box-shadow: 0 22px 60px rgba(15, 69, 41, 0.13);
 }
 
 .hero-card::after {
@@ -359,7 +353,7 @@ button:disabled {
   background: #092f21;
   border: 1px solid rgba(7, 77, 47, 0.15);
   border-radius: 20px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 #slider {
@@ -418,7 +412,7 @@ button:disabled {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .trust-item {
@@ -476,8 +470,8 @@ button:disabled {
   min-height: 310px;
   overflow: hidden;
   background: var(--green-950);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .category-card img,
@@ -520,7 +514,7 @@ button:disabled {
   background: var(--green-900);
   border: 1px solid rgba(7, 77, 47, 0.16);
   border-radius: 20px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .fresh-banner img {
@@ -551,7 +545,7 @@ button:disabled {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 16px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .bank-card img,
@@ -604,7 +598,7 @@ button:disabled {
   overflow: hidden;
   background: linear-gradient(135deg, #e9f8ed, #ffffff);
   border: 1px solid #cfe9d6;
-  border-radius: var(--radius-lg);
+  border-radius: 30px;
 }
 
 .loyalty-copy h2 {
@@ -649,7 +643,7 @@ button:disabled {
   padding: clamp(34px, 6vw, 64px);
   background: linear-gradient(135deg, #e8f7ec, #ffffff);
   border: 1px solid #d5ebdb;
-  border-radius: var(--radius-lg);
+  border-radius: 30px;
 }
 
 .page-heading p {
@@ -669,7 +663,7 @@ button:disabled {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 16px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .catalog-toolbar label {
@@ -727,7 +721,7 @@ input:focus {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -823,7 +817,7 @@ input:focus {
   color: #ffffff;
   background: var(--green-800);
   border-radius: 12px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 22px 60px rgba(15, 69, 41, 0.13);
 }
 
 .oculto {
@@ -866,8 +860,8 @@ input:focus {
   padding: clamp(28px, 5vw, 60px);
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .detail-image {
@@ -876,7 +870,7 @@ input:focus {
   padding: 35px;
   place-items: center;
   background: #f6faf7;
-  border-radius: var(--radius-md);
+  border-radius: 20px;
 }
 
 .detail-image img {
@@ -923,7 +917,7 @@ input:focus {
   text-align: center;
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
+  border-radius: 20px;
 }
 
 /* Cart */
@@ -962,8 +956,8 @@ input:focus {
   padding: 28px;
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .cart-summary h2 {
@@ -997,7 +991,7 @@ input:focus {
   text-align: center;
   background: #ffffff;
   border: 1px dashed #c9d9ce;
-  border-radius: var(--radius-md);
+  border-radius: 20px;
 }
 
 .empty-cart h3 {
@@ -1021,8 +1015,8 @@ input:focus {
   padding: clamp(28px, 4vw, 42px);
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .checkout-intro {
@@ -1177,7 +1171,7 @@ input:focus {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .store-card img {
@@ -1226,8 +1220,8 @@ input:focus {
   overflow: hidden;
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(15, 69, 41, 0.08);
 }
 
 .delivery-card:nth-child(even) .delivery-image {
@@ -2009,7 +2003,7 @@ input:focus {
     background: #ffffff;
     border: 1px solid var(--line);
     border-radius: 14px;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 22px 60px rgba(15, 69, 41, 0.13);
   }
 
   .site-nav.is-open {
@@ -2142,7 +2136,7 @@ input:focus {
 @media (max-width: 560px) {
   .centrado,
   .container {
-    width: min(100% - 28px, var(--container));
+    width: min(100% - 28px, 1180px);
   }
 
   .header-inner {
@@ -2282,5 +2276,111 @@ input:focus {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Dark authentication screens */
+
+.login-page,
+.signup-page {
+  min-height: 100vh;
+  color: #edf3ef;
+  background: #18261e;
+  color-scheme: dark;
+}
+
+.login-page #formulario.login-main,
+.signup-page #formulario.signup-main {
+  background:
+    radial-gradient(circle at 7% 12%, rgba(44, 137, 70, 0.16), transparent 27%),
+    radial-gradient(circle at 93% 88%, rgba(8, 93, 51, 0.17), transparent 30%),
+    #18261e;
+}
+
+.login-page .login-shell,
+.signup-page .signup-shell {
+  background: #1c2b22;
+  border-color: #34483b;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+}
+
+.login-page .login-form-panel,
+.signup-page .signup-form-panel {
+  background: #1b2921;
+}
+
+.login-page .form-heading h2,
+.signup-page .form-heading h2 {
+  color: #f2f5f3;
+}
+
+.login-page .form-heading p,
+.signup-page .form-heading p,
+.login-page .register-prompt,
+.signup-page .register-prompt {
+  color: #a8b6ac;
+}
+
+.login-page .inputLogin label,
+.signup-page .inputSignup label {
+  color: #dce5df;
+}
+
+.login-page .formLogin .input-control input,
+.signup-page .formSignup .input-control input {
+  color: #edf3ef;
+  background: #15221b;
+  border-color: #3a4d40;
+}
+
+.login-page .formLogin .input-control input::placeholder,
+.signup-page .formSignup .input-control input::placeholder {
+  color: #77867c;
+}
+
+.login-page .formLogin .input-control input:focus,
+.signup-page .formSignup .input-control input:focus {
+  background: #18271f;
+  border-color: #32ad5a;
+  box-shadow: 0 0 0 4px rgba(50, 173, 90, 0.13);
+}
+
+.login-page .input-control svg,
+.signup-page .input-control svg {
+  stroke: #8ea096;
+}
+
+.login-page .register-prompt a,
+.signup-page .register-prompt a {
+  color: #65d782;
+}
+
+.login-page .security-note,
+.signup-page .security-note {
+  color: #78877e;
+}
+
+.login-page #errorLogin,
+.signup-page #errorSignup {
+  color: #ff9c9c;
+}
+
+.signup-page #botonSignupVolver {
+  color: #c8efd1;
+  background: #203a2a;
+  border-color: #3d6549;
+}
+
+.signup-page #botonSignupVolver:hover {
+  color: #ffffff;
+  background: #294a35;
+}
+
+@media (max-width: 700px) {
+  .login-page #formulario.login-main,
+  .signup-page #formulario.signup-main,
+  .login-page .login-form-panel,
+  .signup-page .signup-form-panel {
+    background: #18261e;
   }
 }
