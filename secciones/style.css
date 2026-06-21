@@ -1743,6 +1743,207 @@ input:focus {
   font-weight: 800;
 }
 
+/* Dark storefront theme */
+
+.site-page {
+  --ink: #edf3ef;
+  --muted: #a8b6ac;
+  --line: #34483b;
+  --surface: #1e3026;
+  --canvas: #18261e;
+  --green-50: #203b2b;
+  --green-100: #294b36;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--canvas);
+  color-scheme: dark;
+}
+
+.site-page .site-header {
+  background: rgba(18, 24, 20, 0.96);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.site-page .site-nav a {
+  color: #b4beb7;
+}
+
+.site-page .site-nav a:hover,
+.site-page .site-nav a[aria-current="page"] {
+  color: #dcf6e3;
+  background: #0d3b26;
+}
+
+.site-page .logout-button,
+.site-page .menu-toggle {
+  color: #aeb9b1;
+  background: #151d18;
+  border-color: #354039;
+}
+
+.site-page .logout-button:hover,
+.site-page .menu-toggle:hover {
+  color: #ffffff;
+  background: #203329;
+}
+
+.site-page .section-heading h2,
+.site-page .page-heading h1 {
+  color: var(--ink);
+}
+
+.site-page .hero-actions .btn:first-child {
+  color: #f4f5f4;
+  background: #151b17;
+}
+
+.site-page .hero-actions .btn:first-child:hover {
+  background: #0e1511;
+}
+
+.site-page .trust-strip,
+.site-page .bank-card,
+.site-page .offer-card,
+.site-page .gr figure,
+.site-page .catalog-toolbar,
+.site-page .producto,
+.site-page .producto-detalle,
+.site-page .detail-state,
+.site-page .cart-summary,
+.site-page .empty-cart,
+.site-page .checkout-panel,
+.site-page .store-card,
+.site-page .delivery-card,
+.site-page .about-card,
+.site-page .value-card {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: 0 18px 45px rgba(3, 12, 7, 0.2);
+}
+
+.site-page .trust-item + .trust-item {
+  border-color: var(--line);
+}
+
+.site-page .trust-icon,
+.site-page .value-card span {
+  color: #68d983;
+  background: #183f28;
+}
+
+.site-page .loyalty-card {
+  color: var(--ink);
+  background: linear-gradient(135deg, #20372a, #1b2b22);
+  border-color: #36513f;
+}
+
+.site-page .page-heading {
+  background:
+    radial-gradient(circle at 88% 15%, rgba(52, 153, 81, 0.13), transparent 28%),
+    linear-gradient(135deg, #20362a, #1b2a22);
+  border-color: #334b3b;
+}
+
+.site-page select,
+.site-page input[type="text"],
+.site-page input[type="email"],
+.site-page input[type="password"] {
+  color: var(--ink);
+  background: #15221b;
+  border-color: #3a4d40;
+}
+
+.site-page select option {
+  color: var(--ink);
+  background: #18261e;
+}
+
+.site-page .product-image-wrap,
+.site-page .detail-image {
+  background: #24372c;
+}
+
+.site-page .product-category {
+  color: #b8efc4;
+  background: rgba(16, 49, 31, 0.92);
+  border-color: #376447;
+}
+
+.site-page .producto:hover {
+  border-color: #4d765c;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
+}
+
+.site-page .acciones a {
+  color: #c5f1ce;
+  background: #1a3b27;
+  border-color: #335d40;
+}
+
+.site-page #btn_numeros img {
+  background: #203027;
+  border-color: var(--line);
+}
+
+.site-page .producto-en-carrito .acciones button {
+  color: #ffadad;
+  background: #3e2324;
+  border-color: #684043;
+}
+
+.site-page #total-precio {
+  border-color: var(--line);
+}
+
+.site-page .checkout-form,
+.site-page .choice-button {
+  color: var(--ink);
+  background: #22342a;
+  border-color: #3b5042;
+}
+
+.site-page .choice-button:hover {
+  color: #ffffff;
+  background: #294434;
+  border-color: #4b7659;
+}
+
+.site-page .purchase-success {
+  color: #c8f2d1;
+  background: #173d26;
+  border-color: #356a45;
+}
+
+.site-page .store-meta,
+.site-page .delivery-copy p,
+.site-page .about-copy p,
+.site-page .value-card p,
+.site-page .product-info p,
+.site-page .detail-description,
+.site-page .cart-summary-note,
+.site-page .checkout-panel > p {
+  color: var(--muted);
+}
+
+.site-page .store-number {
+  color: #baf0c6;
+  background: #1a4029;
+}
+
+.site-page .site-footer {
+  background: #101813;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 800px) {
+  .site-page .site-nav {
+    background: #17231c;
+    border-color: #34453a;
+  }
+}
+
 /* Responsive */
 
 @media (max-width: 1000px) {
