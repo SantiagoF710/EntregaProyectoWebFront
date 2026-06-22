@@ -28,7 +28,7 @@
 
         const todasLasCategoriasOption = document.createElement('option');
         todasLasCategoriasOption.value = 'todas';
-        todasLasCategoriasOption.textContent = 'Todas las categorías';
+        todasLasCategoriasOption.textContent = 'Todas las categorias';
         filtroCategorias.appendChild(todasLasCategoriasOption);
 
         categoriasUnicas.forEach((categoria) => {

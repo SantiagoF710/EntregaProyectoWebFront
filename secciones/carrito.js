@@ -16,7 +16,7 @@ function mostrarCarritoEnHTML(carrito) {
   const compraDiv = document.getElementById('compra');
 
   if (carrito.length === 0) {
-    contenedor.innerHTML = '<div class="empty-cart"><h3>Tu carrito está vacío</h3><p>Explorá el catálogo y agregá los productos que necesites.</p><a class="btn" href="lista.html" style="margin-top:20px;">Ver productos</a></div>';
+    contenedor.innerHTML = '<div class="empty-cart"><h3>Tu carrito esta vacio</h3><p>Explora el catalogo y agrega los productos que necesites.</p><a class="btn" href="lista.html" style="margin-top:20px;">Ver productos</a></div>';
     document.getElementById('total-precio').innerText = 'Total: $0.00';
     compraDiv.innerHTML = '';
     window.dispatchEvent(new Event('cart-updated'));

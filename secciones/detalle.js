@@ -4,11 +4,11 @@ const contenedor = document.getElementById('detalle-container');
 const idProducto = Number(new URLSearchParams(window.location.search).get('id'));
 
 const mostrarError = (mensaje) => {
-  contenedor.innerHTML = `<div class="detail-state"><h2>No pudimos cargar el producto</h2><p>${mensaje}</p><a class="btn" href="lista.html" style="margin-top:20px;">Volver al catálogo</a></div>`;
+  contenedor.innerHTML = `<div class="detail-state"><h2>No pudimos cargar el producto</h2><p>${mensaje}</p><a class="btn" href="lista.html" style="margin-top:20px;">Volver al catalogo</a></div>`;
 };
 
 if (!idProducto) {
-  mostrarError('El identificador del producto no es válido.');
+  mostrarError('El identificador del producto no es valido.');
 } else {
   MiServidor.obtenerListaProductos()
     .then((productos) => {
