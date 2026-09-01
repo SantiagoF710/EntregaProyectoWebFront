@@ -76,7 +76,7 @@
         );
 
         imprimir('primeraseccion', mostrarTodosLosProductos(productosMostrados));
-        document.querySelectorAll('.agregarCarrito').forEach((boton) => {
+        document.querySelectorAll('.agregar-carrito').forEach((boton) => {
             boton.addEventListener('click', (event) => {
                 const productId = event.target.dataset.id;
                 const productoEncontrado = data.find((p) => p.id === parseInt(productId));
@@ -113,7 +113,7 @@
     }
 
     function mostrarBotonesN(visible) {
-        const botonesN = document.querySelectorAll(".n");
+        const botonesN = document.querySelectorAll(".numero-pagina");
         botonesN.forEach((boton) => {
             boton.style.display = visible ? 'inline-block' : 'none';
         });
@@ -132,9 +132,9 @@
         mostrarListado();
     }
 
-    let n1 = document.querySelector(".n1");
-    let n2 = document.querySelector(".n2");
-    let n3 = document.querySelector(".n3");
+    let n1 = document.querySelector(".numero-uno");
+    let n2 = document.querySelector(".numero-dos");
+    let n3 = document.querySelector(".numero-tres");
 
     n1.addEventListener("click", () => actualizarGrilla(0, 16));
     n2.addEventListener("click", () => actualizarGrilla(16, 32));

@@ -16,7 +16,7 @@ function mostrarCarritoEnHTML(carrito) {
   const compraDiv = document.getElementById('compra');
 
   if (carrito.length === 0) {
-    contenedor.innerHTML = '<div class="empty-cart"><h3>Tu carrito esta vacio</h3><p>Explora el catalogo y agrega los productos que necesites.</p><a class="btn" href="lista.html" style="margin-top:20px;">Ver productos</a></div>';
+    contenedor.innerHTML = '<div class="carrito-vacio"><h3>Tu carrito esta vacio</h3><p>Explora el catalogo y agrega los productos que necesites.</p><a class="boton" href="lista.html" style="margin-top:20px;">Ver productos</a></div>';
     document.getElementById('total-precio').innerText = 'Total: $0.00';
     compraDiv.innerHTML = '';
     window.dispatchEvent(new Event('cart-updated'));
@@ -25,8 +25,8 @@ function mostrarCarritoEnHTML(carrito) {
 
   contenedor.innerHTML = carrito.map((producto) => `
     <figure class="producto producto-en-carrito">
-      <div class="product-image-wrap"><img src="${producto.img}" alt="${producto.nombre}"><span class="product-category">${producto.categoria || 'Frog'}</span></div>
-      <figcaption class="product-info"><h3>${producto.nombre}</h3><div class="precio">$${producto.precio}</div></figcaption>
+      <div class="marco-imagen-producto"><img src="${producto.img}" alt="${producto.nombre}"><span class="categoria-producto">${producto.categoria || 'Frog'}</span></div>
+      <figcaption class="info-producto"><h3>${producto.nombre}</h3><div class="precio">$${producto.precio}</div></figcaption>
       <div class="acciones"><button class="eliminar-del-carrito" data-id="${producto.id}" type="button">Quitar del carrito</button></div>
     </figure>`).join('');
 

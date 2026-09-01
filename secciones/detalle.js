@@ -4,7 +4,7 @@ const contenedor = document.getElementById('detalle-container');
 const idProducto = Number(new URLSearchParams(window.location.search).get('id'));
 
 const mostrarError = (mensaje) => {
-  contenedor.innerHTML = `<div class="detail-state"><h2>No pudimos cargar el producto</h2><p>${mensaje}</p><a class="btn" href="lista.html" style="margin-top:20px;">Volver al catalogo</a></div>`;
+  contenedor.innerHTML = `<div class="estado-detalle"><h2>No pudimos cargar el producto</h2><p>${mensaje}</p><a class="boton" href="lista.html" style="margin-top:20px;">Volver al catalogo</a></div>`;
 };
 
 if (!idProducto) {
@@ -20,13 +20,13 @@ if (!idProducto) {
 
       contenedor.innerHTML = `
         <article class="producto-detalle">
-          <div class="detail-image"><img src="${producto.img}" alt="${producto.nombre}"></div>
+          <div class="imagen-detalle"><img src="${producto.img}" alt="${producto.nombre}"></div>
           <div class="detalle-info">
-            <span class="product-category">${producto.categoria}</span>
+            <span class="categoria-producto">${producto.categoria}</span>
             <h1>${producto.nombre}</h1>
-            <p class="detail-description">${producto.descripcion || 'Un producto seleccionado con la calidad y confianza de Frog.'}</p>
-            <div class="detail-price">$${producto.precio}</div>
-            <div class="detail-actions"><button id="agregarDetalle" type="button">Agregar al carrito</button><a class="btn btn-secondary" href="lista.html">Seguir comprando</a></div>
+            <p class="descripcion-detalle">${producto.descripcion || 'Un producto seleccionado con la calidad y confianza de Frog.'}</p>
+            <div class="precio-detalle">$${producto.precio}</div>
+            <div class="acciones-detalle"><button id="agregarDetalle" type="button">Agregar al carrito</button><a class="boton boton-secundario" href="lista.html">Seguir comprando</a></div>
           </div>
         </article>`;
 

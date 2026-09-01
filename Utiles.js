@@ -22,5 +22,5 @@ export const validarSesion = () => {
 };
 
 export const mostrarTodosLosProductos = (productos = [new Productos()]) => {
-  return `<article id="grilla" class="grillacat">${productos.map((producto) => producto.mostrarEnLista()).join('')}</article>`;
+  return `<article id="grilla" class="grilla-catalogo">${productos.map((producto) => producto.mostrarEnLista()).join('')}</article>`;
 };
